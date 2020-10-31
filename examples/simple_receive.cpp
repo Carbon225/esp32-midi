@@ -1,13 +1,15 @@
-#include "main.h"
-
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
+#include "esp32_midi.h"
 
 #include "esp_log.h"
 static const char *TAG = "main";
 
 #define MIDI_UART UART_NUM_1
 #define MIDI_RX_GPIO GPIO_NUM_21
+
+SerialMIDI midi;
 
 void HandleMidiMessage(midi_message_t msg)
 {
