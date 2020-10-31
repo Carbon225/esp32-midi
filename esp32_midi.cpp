@@ -2,6 +2,8 @@
 #include "midi_spec.h"
 #include "error_check_return.h"
 
+#include "esp32/rom/uart.h"
+
 #include "esp_log.h"
 static const char *TAG = "midi-parser";
 
